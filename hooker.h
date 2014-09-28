@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 int patch(void *address, unsigned char *opcodes, size_t n_opcodes, unsigned char *backup);
 
 int hook(void *address, void *new_address, unsigned char **backup, size_t *backup_size);

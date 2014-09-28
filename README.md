@@ -9,6 +9,7 @@ Example usage
 -------------
 
 ```
+#include <stdio.h>
 #include "hooker.h"
 
 int foo(void) {
