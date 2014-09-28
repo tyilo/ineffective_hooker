@@ -13,18 +13,21 @@ Example usage
 #include "hooker.h"
 
 int foo(void) {
-	return 1;}
+	return 1;
+}
 
 int my_foo(void) {
-	return foo() + 1;}
+	return foo() + 1;
+}
 
 int main(void) {
 	printf("%d\n", foo()); // 1
 	hook(foo, my_foo, NULL, NULL);
-	printf("%d\n", foo()); // 2}
+	printf("%d\n", foo()); // 2
+}
 ```
 
-Using other hooking libraries such as [CydiaSubstrate](http://www.cydiasubstrate.com/) or mach_override you would get back a reference to the original function which then must be used inside the replacement function.
+Using other hooking libraries such as mach_override or [CydiaSubstrate's MSHookFunction](http://www.cydiasubstrate.com/) you would get back a reference to the original function which then must be used inside the replacement function.
 
 This is not required (or possible) with ineffecitive_hooker.
 
