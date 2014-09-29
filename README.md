@@ -40,4 +40,4 @@ ineffecitive_hooker works by replacing the original function with some self-modi
 - calls the replacement function (which might call the original function)
 - puts the hooking code back instead of the original function
 
-The reason this code is so ineffective is that instead of requiring a few more instructions to be executed like other libraries, it makes the code run a couple of thousand instruction more instructions instead.
+The reason this code is so ineffective is that instead of requiring a few more instructions to be executed like other libraries, it makes the code run a couple of thousand more instructions instead.
