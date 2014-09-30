@@ -41,3 +41,9 @@ ineffecitive_hooker works by replacing the original function with some self-modi
 - puts the hooking code back instead of the original function
 
 The reason this code is so ineffective is that instead of requiring a few more instructions to be executed like other libraries, it makes the code run a couple of thousand more instructions instead.
+
+Caveats
+-------
+
+- Only support x86_64 and i368 architectures.
+- When hooking a function the first 13 bytes for x86_64 or 6 bytes for i368 will be overwritten. If the function is smaller than that other data/functions might be overwritten.
