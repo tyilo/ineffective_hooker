@@ -1,7 +1,7 @@
 ineffective_hooker
 ==================
 
-Similar to [mach_override](https://github.com/rentzsch/mach_override)
+Similar to [mach_override](https://github.com/rentzsch/mach_override) and [rd_route](https://github.com/rodionovd/rd_route)
 
 Lets you replace a functions implementation with another function which can call the original function normally.
 
@@ -27,7 +27,7 @@ int main(void) {
 }
 ```
 
-Using other hooking libraries such as mach_override or [CydiaSubstrate's MSHookFunction](http://www.cydiasubstrate.com/) you would get back a reference to the original function which then must be used inside the replacement function.
+Using other hooking libraries such as mach_override or rd_route you would get back a reference to the original function which then must be used inside the replacement function.
 
 This is not required (or possible) with ineffecitive_hooker.
 
@@ -45,5 +45,5 @@ The reason this code is so ineffective is that instead of requiring a few more i
 Caveats
 -------
 
-- Only support x86_64 and i368 architectures.
+- Only supports x86_64 and i368 architectures.
 - When hooking a function the first 13 bytes for x86_64 or 6 bytes for i368 will be overwritten. If the function is smaller than that other data/functions might be overwritten.
